@@ -3,62 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-    <script src="calc.js"></script>
+    <title>Calculator</title>
+    <script src="cal.js"></script>
+	<style>
+  input[type="text"] {
+    font-size: 20px;
+    padding: 10px;
+    text-align: right;
+  }
+
+  table {
+    margin: auto;
+    border-spacing: 10px;
+  }
+
+  input[type="button"] {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+</style>
+
 </head>
 <body>
-    <table id="calcu">
-		<tr>
-			<td colspan="3"><input type="text" id="result"></td>
-			<!-- clr() function will call clr to clear all value -->
+    <h2 style= text-align:center;>Calculator</h2>
+    <table>
+        	<tr>
+			<tr>
+  <td colspan="4">
+    <input type="text" id="expression" placeholder="Expression" disabled style="width: 100%;">
+  </td>
+</tr>
+<tr>
+  <td colspan="4">
+    <input type="text" id="result" placeholder="Result" disabled style="width: 100%; font-weight: bold;">
+  </td>
+</tr>
+
 			<td><input type="button" value="c" onclick="clr()" /> </td>
 		</tr>
 		<tr>
-			<!-- create button and assign value to each button -->
-			<!-- dis("1") will call function dis to display value -->
-			<td><input type="button" value="1" id = "1" onclick="dis('1')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="2" id = "2" onclick="dis('2')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="3"id = "3" onclick="dis('3')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="/" id = "/"onclick="dis('/')"
-						onkeydown="myFunction(event)"> </td>
+			
+			<td><input type="button" value="1" id="1" onclick="dis('1')"> </td>
+			<td><input type="button" value="2" id="2" onclick="dis('2')"> </td>
+			<td><input type="button" value="3" id="3" onclick="dis('3')"> </td>
+			<td><input type="button" value="/" id="/" onclick="dis('/')"> </td>
 		</tr>
 		<tr>
-			<td><input type="button" value="4" id = "4"onclick="dis('4')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="5"id = "5" onclick="dis('5')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="6"id = "6" onclick="dis('6')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="*"id = "*" onclick="dis('*')"
-						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="4" id="4" onclick="dis('4')"> </td>
+			<td><input type="button" value="5" id="5" onclick="dis('5')"> </td>
+			<td><input type="button" value="6" id="6" onclick="dis('6')"> </td>
+			<td><input type="button" value="*" id="*"onclick="dis('*')"> </td>
 		</tr>
 		<tr>
-			<td><input type="button" value="7"id = "7" onclick="dis('7')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="8"id = "8" onclick="dis('8')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="9"id = "9" onclick="dis('9')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="-" id = "-"onclick="dis('-')"
-						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="7" id="7" onclick="dis('7')"> </td>
+			<td><input type="button" value="8" id="8"onclick="dis('8')"> </td>
+			<td><input type="button" value="9" id="9"onclick="dis('9')"> </td>
+			<td><input type="button" value="-" id="-"onclick="dis('-')"> </td>
 		</tr>
 		<tr>
-			<td><input type="button" value="0" id = 0 onclick="dis('0')"
-						onkeydown="myFunction(event)"> </td>
-			<td><input type="button" value="." onclick="dis('.')"
-						onkeydown="myFunction(event)"> </td>
-			<!-- solve function call function solve to evaluate value -->
-			<td><input type="button" value="=" onclick="solve()"> </td>
+			<td><input type="button" value="0" id="0"onclick="dis('0')"> </td>
+			<td><input type="button" value="." id="."onclick="dis('.')"> </td>
+		
+			<td><input type="button" value="=" id="="onclick="solve()"> </td>
 
-			<td><input type="button" value="+" onclick="dis('+')"
-						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="+" id="+"onclick="dis('+')"> </td>
 		</tr>
 	</table>
-
-   
-    
 </body>
 </html>
